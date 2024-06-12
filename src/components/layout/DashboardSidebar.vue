@@ -13,7 +13,7 @@ import { Icon } from '@iconify/vue'
         <li>
           <RouterLink
             :to="{ name: 'products' }"
-            class="flex items-center gap-2 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
+            class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
           >
             <Icon icon="lucide:box" class="w-[24px] h-[24px]"></Icon>
             <span>Mahsulotlar</span>
@@ -22,7 +22,7 @@ import { Icon } from '@iconify/vue'
         <li>
           <RouterLink
             :to="{ name: 'analytics' }"
-            class="flex items-center gap-2 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
+            class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
           >
             <Icon icon="flowbite:chart-line-up-outline" class="w-[24px] h-[24px]"></Icon>
             <span>Analitika</span>
@@ -31,7 +31,7 @@ import { Icon } from '@iconify/vue'
         <li>
           <RouterLink
             :to="{ name: 'comments' }"
-            class="flex items-center gap-2 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
+            class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
           >
             <Icon icon="ph:star" class="w-[24px] h-[24px]"></Icon>
             <span>Sharhlar</span>
@@ -40,7 +40,7 @@ import { Icon } from '@iconify/vue'
         <li>
           <RouterLink
             :to="{ name: 'followers' }"
-            class="flex items-center gap-2 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
+            class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
           >
             <Icon icon="mage:users" class="w-[24px] h-[24px]"></Icon>
             <span>Obunachilar</span>
@@ -49,7 +49,7 @@ import { Icon } from '@iconify/vue'
         <li>
           <RouterLink
             :to="{ name: 'settings' }"
-            class="flex items-center gap-2 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
+            class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
           >
             <Icon icon="tabler:settings-2" class="w-[24px] h-[24px]"></Icon>
             <span>Sozlamalar</span>

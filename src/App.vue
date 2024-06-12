@@ -5,7 +5,7 @@ import DashboardSidebar from './components/layout/DashboardSidebar.vue'
 <template>
   <div class="flex">
     <DashboardSidebar />
-    <div class="flex-1 h-screen">
+    <div class="flex-1 h-screen bg-[#EDEDED] overflow-auto">
       <RouterView />
     </div>
   </div>
