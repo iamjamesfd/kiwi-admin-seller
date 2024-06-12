@@ -28,5 +28,9 @@ import ProductCard from '@/components/common/ProductCard.vue'
   <div class="grid grid-cols-12 gap-6 px-6">
     <ProductCard :onSold="true"/>
     <ProductCard :onSold="false"/>
+    <ProductCard :onSold="true"/>
+    <ProductCard :onSold="false"/>
+    <ProductCard :onSold="true"/>
+    <ProductCard :onSold="false"/>
   </div>
 </template>

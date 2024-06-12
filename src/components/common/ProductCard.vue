@@ -20,13 +20,13 @@ const props = defineProps(['onSold'])
           Sotuvda yo'q
         </div>
 
-        <div class="dropdown dropdown-hover">
+        <div class="dropdown dropdown-end dropdown-hover">
           <div tabindex="0" role="button" class="m-1">
             <Icon icon="iconamoon:menu-kebab-horizontal-bold" class="w-6 h-6 text-black"></Icon>
           </div>
           <ul
             tabindex="0"
-            class="dropdown-content z-[1] menu shadow bordre bg-white text-black rounded-box"
+            class="dropdown-content -mt-1 z-[1] menu shadow bordre bg-white text-black rounded-box"
           >
             <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">Sotuvda yo'q</a></li>
             <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">Berkitish</a></li>
