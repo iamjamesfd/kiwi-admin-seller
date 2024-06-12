@@ -2,6 +2,7 @@
 import {Icon} from "@iconify/vue"
 import DashboardHeader from '@/components/layout/DashboardHeader.vue'
 import ProductCard from '@/components/common/ProductCard.vue'
+import { RouterLink } from "vue-router";
 </script>
 <template>
   <DashboardHeader title="Mahsulotlar" />
@@ -19,10 +20,10 @@ import ProductCard from '@/components/common/ProductCard.vue'
         <Icon icon="system-uicons:filtering" class="w-[24px] h-[24px]"></Icon>
         <span>Filterlash</span>
       </div>
-      <div class="w-fit flex items-center gap-2 py-2 px-4 bg-[#0EB182] text-white rounded-lg cursor-pointer">
+      <RouterLink to="/add-product" class="w-fit flex items-center gap-2 py-2 px-4 bg-[#0EB182] text-white rounded-lg cursor-pointer">
         <Icon icon="gala:add" class="w-[24px] h-[24px]"></Icon>
         <span>Mahsulot qo'shish</span>
-      </div>
+      </RouterLink>
     </div>
   </div>
   <div class="grid grid-cols-12 gap-6 px-6">
