@@ -21,7 +21,7 @@ const sidebarCollapsed = ref(false)
   >
     <div
       class="flex justify-end items-center px-8 py-6 mb-10 min-h-24"
-      :class="{ 'px-0 justify-center': sidebarCollapsed }"
+      :class="{ '!px-0 justify-center': sidebarCollapsed }"
     >
       <Transition name="dissapear">
         <h1 class="text-[28px] text-white duration-200 flex-1" v-if="!sidebarCollapsed">
@@ -41,7 +41,7 @@ const sidebarCollapsed = ref(false)
           <RouterLink
             :to="{ name: 'products' }"
             class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
-            :class="{ 'px-0 justify-center': sidebarCollapsed }"
+            :class="{ '!px-0 justify-center': sidebarCollapsed }"
           >
             <Icon icon="lucide:box" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
@@ -53,7 +53,7 @@ const sidebarCollapsed = ref(false)
           <RouterLink
             :to="{ name: 'analytics' }"
             class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
-            :class="{ 'px-0 justify-center': sidebarCollapsed }"
+            :class="{ '!px-0 justify-center': sidebarCollapsed }"
           >
             <Icon icon="flowbite:chart-line-up-outline" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
@@ -65,7 +65,7 @@ const sidebarCollapsed = ref(false)
           <RouterLink
             :to="{ name: 'comments' }"
             class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
-            :class="{ 'px-0 justify-center': sidebarCollapsed }"
+            :class="{ '!px-0 justify-center': sidebarCollapsed }"
           >
             <Icon icon="ph:star" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
@@ -77,7 +77,7 @@ const sidebarCollapsed = ref(false)
           <RouterLink
             :to="{ name: 'followers' }"
             class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
-            :class="{ 'px-0 justify-center': sidebarCollapsed }"
+            :class="{ '!px-0 justify-center': sidebarCollapsed }"
           >
             <Icon icon="mage:users" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
@@ -89,7 +89,7 @@ const sidebarCollapsed = ref(false)
           <RouterLink
             :to="{ name: 'settings' }"
             class="flex items-center gap-3 text-[#9B9B9B] py-4 px-9 text-[15px] hover:bg-[#1E1E23] border-l-[5px] border-transparent"
-            :class="{ 'px-0 justify-center': sidebarCollapsed }"
+            :class="{ '!px-0 justify-center': sidebarCollapsed }"
           >
             <Icon icon="tabler:settings-2" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
@@ -101,7 +101,7 @@ const sidebarCollapsed = ref(false)
     </div>
     <div
       class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28"
-      :class="{ 'px-0 justify-center': sidebarCollapsed }"
+      :class="{ '!px-0 justify-center': sidebarCollapsed }"
     >
       <Transition name="dissapear">
         <div class="flex items-center gap-3 duration-200 flex-1" v-if="!sidebarCollapsed">
