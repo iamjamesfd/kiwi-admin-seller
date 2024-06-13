@@ -45,7 +45,7 @@ const sidebarCollapsed = ref(false)
           >
             <Icon icon="lucide:box" class="w-[24px] h-[24px]"></Icon>
             <Transition name="fade-out">
-              <span class="duration-200 delay-0" v-if="!sidebarCollapsed">Mahsulotlar</span>
+              <span class="duration-200" v-if="!sidebarCollapsed">Mahsulotlar</span>
             </Transition>
           </RouterLink>
         </li>

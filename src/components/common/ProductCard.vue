@@ -1,6 +1,16 @@
 <script setup lang="tsx">
 import { Icon } from '@iconify/vue'
-const props = defineProps(['onSold'])
+const props = defineProps([
+  'onSold',
+  'id',
+  'rating',
+  'views',
+  'sold',
+  'refund',
+  'drawback',
+  'name',
+  'price'
+])
 </script>
 <template>
   <div class="col-span-3 bg-white border-b-2 rounded-lg">
@@ -28,42 +38,63 @@ const props = defineProps(['onSold'])
             tabindex="0"
             class="dropdown-content -mt-1 z-[1] menu shadow bordre bg-white text-black rounded-box"
           >
-            <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">Sotuvda yo'q</a></li>
-            <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">Berkitish</a></li>
-            <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">E'lonni ko'tarish</a></li>
-            <li><a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black">Tahrirlash</a></li>
-            <li><a class="px-4 whitespace-nowrap text-[#DA2C2C] active:!bg-slate-300 active:!text-[#DA2C2C]">E'lonni o'chirish</a></li>
+            <li>
+              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+                >Sotuvda yo'q</a
+              >
+            </li>
+            <li>
+              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+                >Berkitish</a
+              >
+            </li>
+            <li>
+              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+                >E'lonni ko'tarish</a
+              >
+            </li>
+            <li>
+              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+                >Tahrirlash</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 whitespace-nowrap text-[#DA2C2C] active:!bg-slate-300 active:!text-[#DA2C2C]"
+                >E'lonni o'chirish</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="text-black">
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">ID</h3>
-          <p>#13323</p>
+          <p>#{{props.id}}</p>
         </div>
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">Reyting</h3>
-          <p>0,00</p>
+          <p>{{props.rating}}</p>
         </div>
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">Ko'rganlar soni</h3>
-          <p>113</p>
+          <p>{{props.views}}</p>
         </div>
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">Sotilgan</h3>
-          <p>14</p>
+          <p>{{props.sold}}</p>
         </div>
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">Qaytarilgan</h3>
-          <p>0</p>
+          <p>{{props.refund}}</p>
         </div>
         <div class="flex items-center justify-between py-2 font-light">
           <h3 class="text-[#666]">Nuqson</h3>
-          <p>0</p>
+          <p>{{props.drawback}}</p>
         </div>
         <div>
-          <h1 class="text-lg mb-4 mt-1">Фрида Кало</h1>
-          <h3 class="text-sm">700 000<span>so'm dan</span></h3>
+          <h1 class="text-lg mb-4 mt-1">{{props.name}}</h1>
+          <h3 class="text-sm">{{props.price}} <span>so'm dan</span></h3>
         </div>
       </div>
     </div>
