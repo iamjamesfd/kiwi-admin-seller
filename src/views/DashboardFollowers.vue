@@ -31,7 +31,7 @@ import DashboardHeader from '@/components/layout/DashboardHeader.vue'
       </RouterLink>
     </div>
   </div>
-  <div class="px-6">
+  <div class="px-6 pb-5">
     <table class="w-full bg-white rounded-xl overflow-hidden">
       <thead class="bg-[#F6F5FF] text-black">
         <tr class="text-center text-sm">

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashboardProducts from '../views/DashboardProducts.vue'
+import CreateProduct from '@/views/inner_views/CreateProduct.vue'
 import DashboardAnalytics from '@/views/DashboardAnalytics.vue'
 import DashboardComments from '@/views/DashboardComments.vue'
 import DashboardFollowers from '@/views/DashboardFollowers.vue'
@@ -13,6 +14,11 @@ const router = createRouter({
       path: '/',
       name: 'products',
       component: DashboardProducts
+    },
+    {
+      path: '/create-product',
+      name: 'create-product',
+      component: CreateProduct,
     },
     {
       path: '/analytics',

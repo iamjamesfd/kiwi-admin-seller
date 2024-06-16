@@ -27,7 +27,7 @@ import ProductCard from '@/components/common/ProductCard.vue'
         <span>Filterlash</span>
       </div>
       <RouterLink
-        to="/add-product"
+        :to="{name: 'create-product'}"
         class="w-fit flex items-center gap-2 py-2 px-4 bg-[#0EB182] text-white rounded-lg cursor-pointer"
       >
         <Icon icon="gala:add" class="w-[24px] h-[24px]"></Icon>
@@ -35,7 +35,7 @@ import ProductCard from '@/components/common/ProductCard.vue'
       </RouterLink>
     </div>
   </div>
-  <div class="grid grid-cols-12 gap-6 px-6">
+  <div class="grid grid-cols-12 gap-6 px-6 pb-5">
     <ProductCard
       v-for="x in data"
       :key="x"

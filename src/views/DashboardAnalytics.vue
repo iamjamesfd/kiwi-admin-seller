@@ -10,16 +10,20 @@ const head = [
   { label: "Rasm", key: 'img', type: 'image'},
   { label: "Mahsulot nomi", key: 'name' },
   { label: "Mahsulot ID", key: 'id' },
-  { label: "Narxi", key: 'price' },
+  { label: "Narxi", key: 'price', formatter: function (val) { return val.price + val.currency } },
   { label: "Sotildi", key: 'sold' },
   { label: "Qoldiq", key: 'availibleProducts' },
 ]
 const body = [
-  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: "561 000 uzs", sold: 142, availibleProducts: 38 },
-  { img: null, name: 'Macbook Pro 2016', id: "#" + 1234, price: "561 000 uzs", sold: 142, availibleProducts: 38 },
-  { img: null, name: 'Macbook Pro 2015', id: "#" + 1234, price: "561 000 uzs", sold: 142, availibleProducts: 38 },
-  { img: null, name: 'Macbook Pro 2014', id: "#" + 1234, price: "561 000 uzs", sold: 142, availibleProducts: 38 },
-  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: "561 000 uzs", sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'uzs', price: 123.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2016', id: "#" + 1234, price: { currency: 'uzs', price: 123.42 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2015', id: "#" + 1234, price: { currency: 'uzs', price: 124253.23 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2014', id: "#" + 1234, price: { currency: 'usd', price: 123243.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'usd', price: 123.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'usd', price: 123.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'usd', price: 123.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'usd', price: 123.22 } , sold: 142, availibleProducts: 38 },
+  { img: null, name: 'Macbook Pro 2019', id: "#" + 1234, price: { currency: 'usd', price: 123.22 } , sold: 142, availibleProducts: 38 },
 ]
 
 </script>
@@ -59,8 +63,6 @@ const body = [
       <div class="flex items-center justify-between px-4">
         <h1 class="text-xl text-black">Top mahsulotlar</h1>
         <select
-          name="timeFrame"
-          id="timeFrame"
           class="bg-white border px-3 py-2 rounded-lg text-black text-sm"
         >
           <option>Kunlik</option>
