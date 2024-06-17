@@ -1,5 +1,5 @@
 <script setup lang="tsx">
-import { Icon } from '@iconify/vue'
+// import { Icon } from '@iconify/vue'
 const props = defineProps([
   'onSold',
   'id',
@@ -11,20 +11,20 @@ const props = defineProps([
   'name',
   'price'
 ])
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  // DropdownMenuLabel,
-  // DropdownMenuPortal,
-  // DropdownMenuSeparator,
-  // DropdownMenuShortcut,
-  // DropdownMenuSub,
-  // DropdownMenuSubContent,
-  // DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuGroup,
+//   DropdownMenuItem,
+//   // DropdownMenuLabel,
+//   // DropdownMenuPortal,
+//   // DropdownMenuSeparator,
+//   // DropdownMenuShortcut,
+//   // DropdownMenuSub,
+//   // DropdownMenuSubContent,
+//   // DropdownMenuSubTrigger,
+//   DropdownMenuTrigger,
+// } from '@/components/ui/dropdown-menu'
 </script>
 <template>
   <div class="col-span-3 bg-white border-b-2 rounded-lg">
@@ -43,10 +43,10 @@ import {
         >
           Sotuvda yo'q
         </div>
-
+        <!-- s
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
-            <Button variant="outline"><Icon icon="iconamoon:menu-kebab-horizontal-bold" class="w-6 h-6 text-black"></Icon></Button>
+            <div><Icon icon="iconamoon:menu-kebab-horizontal-bold" class="w-6 h-6 text-black"></Icon></div>
           </DropdownMenuTrigger>
           <DropdownMenuContent class="w-fit rounded-2xl">
             <DropdownMenuGroup>
@@ -65,7 +65,8 @@ import {
               <DropdownMenuItem class="rounded-b-2xl">
                 <span class='text-[#FF6161]'>E'lonni o'chirish</span>
               </DropdownMenuItem>
-              <!-- <DropdownMenuItem>
+
+              <DropdownMenuItem>
                 <CreditCard class="mr-2 h-4 w-4" />
                 <span>Billing</span>
                 <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
@@ -135,10 +136,11 @@ import {
               <span>Log out</span>
               <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
             </DropdownMenuItem>
-           -->
+           
           </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
+        -->
         <!--
         <div class="dropdown dropdown-end dropdown-hover">
           <div tabindex="0" role="button" class="m-1">
