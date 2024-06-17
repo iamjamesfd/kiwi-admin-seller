@@ -1,19 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+
 import { QuillEditor } from '@vueup/vue-quill'
 import { Icon } from '@iconify/vue'
-import {
-  // Select,
-  // SelectContent,
-  // SelectGroup,
-  // SelectItem,
-  // SelectLabel,
-  // SelectTrigger
-  // SelectValue
-} from '@/components/ui/select'
-// import { variants } from '@/store'
 
 import DashboardHeader from '@/components/layout/DashboardHeader.vue'
+import SelectInput from '@/components/common/SelectInput.vue'
 
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
 
@@ -166,6 +158,9 @@ const addVariant = () => {
             placeholder="Narxini kiriting"
             class="w-full p-3 rounded-[10px] border outline-none"
           />
+          <SelectInput :options="['uzs', 'usd',]"
+      :default="'uzs'"
+      class="select"></SelectInput>
           <select class="bg-white border font-light p-4 rounded-lg text-sm">
             <option>UZS</option>
             <option>USD</option>
