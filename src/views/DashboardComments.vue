@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import DashboardHeader from '@/components/layout/DashboardHeader.vue'
 </script>
 <template>
