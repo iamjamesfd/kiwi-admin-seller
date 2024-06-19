@@ -2,18 +2,22 @@
 import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
 import SidebarItem from '../common/SidebarItem.vue'
-// import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 
-// const route = useRoute()
+const route = useRoute()
+
 const sidebarCollapsed = ref(true)
+
 const dashboardSettingsChildrenPath = [
-  '/settings',
-  '/settings/profile-settings',
-  '/settings/security'
+  'main-settings',
+  'profile-settings',
+  'security',
 ]
 
-
-
+const is = (...routes: string[]) => {
+  const args = Array.from(routes);
+  return args.some((r) => r === route.name);
+};
 </script>
 
 <template>
@@ -62,7 +66,7 @@ const dashboardSettingsChildrenPath = [
         link-name="main-settings"
         icon="basil:settings-outline"
         :collapsed="sidebarCollapsed"
-        :class="{ 'router-link-exact-active': dashboardSettingsChildrenPath.value }"
+        :class="{ 'router-link-exact-active': is(...dashboardSettingsChildrenPath) }"
       />
     </div>
     <div
