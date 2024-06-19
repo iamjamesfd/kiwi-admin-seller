@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const animate = require("tailwindcss-animate")
+const containerQueries = require('@tailwindcss/container-queries')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -36,5 +37,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, containerQueries],
 }

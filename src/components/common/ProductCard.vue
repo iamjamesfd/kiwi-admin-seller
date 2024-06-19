@@ -27,7 +27,7 @@ const props = defineProps([
 // } from '@/components/ui/dropdown-menu' col-span-12
 </script>
 <template>
-  <div class="min-w-[230px] flex-0 min-[480px]:col-span-6 min-[760px]:col-span-4 lg:col-span-3 bg-white border-b-2 rounded-lg">
+  <div class="bg-white border-b-2 rounded-lg">
     <div class="w-full h-[166px] bg-gray-500 rounded-t-lg"></div>
     <div class="p-4 text-sm">
       <div class="flex items-center justify-between">

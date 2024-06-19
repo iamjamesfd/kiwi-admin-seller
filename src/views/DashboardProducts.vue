@@ -36,7 +36,8 @@ import ProductCard from '@/components/common/ProductCard.vue'
     </div>
   </div>
   <!-- grid grid-cols-12 -->
-  <div class="flex flex-wrap gap-4 px-6 pb-5">
+  <div class="@container">
+  <div class="@3xl:grid-cols-4 @6xl:grid-cols-5 @7xl:grid-cols-6 grid grid-cols-3 gap-4 px-6 pb-5">
     <ProductCard
       v-for="x in data"
       :key="x"
@@ -51,4 +52,5 @@ import ProductCard from '@/components/common/ProductCard.vue'
       :price="x.price"
     />
   </div>
+</div>
 </template>
