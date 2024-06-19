@@ -1,9 +1,18 @@
-<script setup>
+<script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
 import SidebarItem from '../common/SidebarItem.vue'
+// import { useRoute } from 'vue-router'
 
+// const route = useRoute()
 const sidebarCollapsed = ref(true)
+const dashboardSettingsChildrenPath = [
+  '/settings',
+  '/settings/profile-settings',
+  '/settings/security'
+]
+
+
 
 </script>
 
@@ -12,13 +21,9 @@ const sidebarCollapsed = ref(true)
     class="w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
     :class="{ 'w-[72px]': sidebarCollapsed }"
   >
-    <div
-      class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative"
-    >
+    <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
       <Transition name="dissapear">
-        <h1 class="text-[28px] text-white flex-1" v-if="!sidebarCollapsed">
-          Mandarin
-        </h1>
+        <h1 class="text-[28px] text-white flex-1" v-if="!sidebarCollapsed">Mandarin</h1>
       </Transition>
       <img
         src="@/assets/layout-icons/sidebar-toggler.svg"
@@ -54,9 +59,10 @@ const sidebarCollapsed = ref(true)
       />
       <SidebarItem
         name="Sozlamalar"
-        link-name="settings"
+        link-name="main-settings"
         icon="basil:settings-outline"
         :collapsed="sidebarCollapsed"
+        :class="{ 'router-link-exact-active': dashboardSettingsChildrenPath.value }"
       />
     </div>
     <div
@@ -68,7 +74,10 @@ const sidebarCollapsed = ref(true)
           <h1 class="text-lg">Rahmatulloh</h1>
         </div>
       </Transition>
-      <Icon icon="iconamoon:menu-kebab-vertical-bold" class="w-[24px] h-[24px] absolute right-6"></Icon>
+      <Icon
+        icon="iconamoon:menu-kebab-vertical-bold"
+        class="w-[24px] h-[24px] absolute right-6"
+      ></Icon>
     </div>
   </div>
 </template>

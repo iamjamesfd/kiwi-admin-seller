@@ -1,11 +1,14 @@
 
 <template>
-  <div class="custom-select" :tabindex="tabindex" @blur="open = false">
-    <div class="selected" :class="{ open: open }" @click="open = !open">
-      {{ selected }}
+  <div class="custom-select uppercase" :tabindex="tabindex" @blur="open = false">
+    <div class=" flex items-center justify-between gap-[6px] outline-none border rounded-xl px-4" :class="{ open: open }" @click="open = !open">
+        <Icon icon="emojione:green-apple"></Icon>
+        <p class="text-[12px]">{{ selected }}</p>
+      <Icon icon="formkit:down" class="w-4 h-[7px]"></Icon>
     </div>
-    <div class="items" :class="{ selectHide: !open }">
+    <div class="absolute mt-1 text-[12px] overflow-hidden text-black bg-white w-full border shadow rounded-lg" :class="{ selectHide: !open }">
       <div
+      class="hover:bg-slate-300  px-4"
         v-for="(option, i) of options"
         :key="i"
         @click="
@@ -20,7 +23,8 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { ref, onMounted } from 'vue';
 import { defineProps, defineEmits } from 'vue';
 
@@ -65,51 +69,16 @@ onMounted(() => {
 <style scoped>
 .custom-select {
   position: relative;
-  width: 100%;
   text-align: left;
   outline: none;
   height: 47px;
   line-height: 47px;
 }
 
-.custom-select .selected {
-  background-color: #0a0a0a;
-  border-radius: 6px;
-  border: 1px solid #666666;
-  color: #fff;
-  padding-left: 1em;
-  cursor: pointer;
-  user-select: none;
-}
 
 .custom-select .selected.open {
   border: 1px solid #ad8225;
   border-radius: 6px 6px 0px 0px;
-}
-
-.custom-select .selected:after {
-  position: absolute;
-  content: "";
-  top: 22px;
-  right: 1em;
-  width: 0;
-  height: 0;
-  border: 5px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-.custom-select .items {
-  color: #fff;
-  border-radius: 0px 0px 6px 6px;
-  overflow: hidden;
-  border-right: 1px solid #ad8225;
-  border-left: 1px solid #ad8225;
-  border-bottom: 1px solid #ad8225;
-  position: absolute;
-  background-color: #0a0a0a;
-  left: 0;
-  right: 0;
-  z-index: 1;
 }
 
 .custom-select .items div {

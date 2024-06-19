@@ -143,7 +143,7 @@ const props = defineProps([
           </DropdownMenuContent>
         </DropdownMenu>
         -->
-        <!-- <div class="dropdown dropdown-end dropdown-hover">
+        <div class="dropdown dropdown-end dropdown-hover">
           <div tabindex="0" role="button" class="m-1"></div>
 
           <ul
@@ -178,7 +178,7 @@ const props = defineProps([
             </li>
           </ul>
         </div>
-       -->
+      
       </div>
       <div class="text-black">
         <div class="flex items-center justify-between py-2 font-light">

@@ -5,7 +5,11 @@ import DashboardAnalytics from '@/views/DashboardAnalytics.vue'
 import DashboardComments from '@/views/DashboardComments.vue'
 import DashboardFollowers from '@/views/DashboardFollowers.vue'
 import DashboardSettings from '@/views/DashboardSettings.vue'
+import MainSettings from '@/views/Settings/MainSettings.vue'
+import ProfileSettings from '@/views/Settings/ProfileSettings.vue'
+import GeneralSecurity from '@/views/Settings/GeneralSecurity.vue'
 import DashboardUserProfile from '@/views/DashboardUserProfile.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,13 +42,30 @@ const router = createRouter({
     {
       path: '/settings',
       name: 'settings',
-      component: DashboardSettings
+      component: DashboardSettings,
+      children: [
+        {
+          path: "",
+          name: "main-settings",
+          component: MainSettings
+        },
+        {
+          path: "profile-settings",
+          name: "profile-settings",
+          component: ProfileSettings
+        },
+        {
+          path: "security",
+          name: "security",
+          component: GeneralSecurity
+        },
+      ]
     },
     {
       path: '/user-profile',
       name: 'user-profile',
       component: DashboardUserProfile
-    }
+    },
   ]
 })
 

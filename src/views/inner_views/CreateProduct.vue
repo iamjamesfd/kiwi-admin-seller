@@ -152,30 +152,13 @@ const addVariant = () => {
     <div class="col-span-7 p-7 bg-white rounded-lg flex gap-4 flex-wrap">
       <div>
         <h3 class="mb-2">Narxi<span class="text-[#DA2C2C]">*</span></h3>
-        <div class="flex items-center gap-2 max-w-[300px]">
+        <div class="flex gap-2 max-w-[300px]">
           <input
             type="text"
             placeholder="Narxini kiriting"
-            class="w-full p-3 rounded-[10px] border outline-none"
+            class="w-full p-3 rounded-[10px] flex-1 border outline-none"
           />
-          <SelectInput :options="['uzs', 'usd',]"
-      :default="'uzs'"
-      class="select"></SelectInput>
-          <select class="bg-white border font-light p-4 rounded-lg text-sm">
-            <option>UZS</option>
-            <option>USD</option>
-          </select>
-          <!-- <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a fruit" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
-                <SelectItem value="apple"> Apple </SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select> -->
+          <SelectInput :options="['uzs', 'usd']" :default="'uzs'" class="select"></SelectInput>
         </div>
       </div>
       <div>
@@ -194,6 +177,11 @@ const addVariant = () => {
           class="w-full p-3 rounded-[10px] border outline-none bg-white"
         />
       </div>
+    </div>
+    <div class="col-span-7 flex items-center justify-end gap-6">
+      <button>Bekor qilish</button>
+      <button class="bg-white py-[10px] px-[32px] rounded-lg">Ko'rish</button>
+      <button class='bg-[#FF6200] text-white py-[10px] px-[32px] rounded-lg'>Chop etish</button>
     </div>
   </div>
 </template>
