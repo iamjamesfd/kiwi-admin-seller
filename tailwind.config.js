@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const animate = require("tailwindcss-animate")
 
 /** @type {import('tailwindcss').Config} */

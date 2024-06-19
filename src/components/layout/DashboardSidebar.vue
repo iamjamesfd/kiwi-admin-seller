@@ -1,87 +1,94 @@
-<script setup lang="ts">
+<script setup>
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import SidebarItem from '../common/SidebarItem.vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
 const sidebarCollapsed = ref(true)
+const showMobileNav = ref(false)
 
-const dashboardSettingsChildrenPath = [
-  'main-settings',
-  'profile-settings',
-  'security',
-]
+const dashboardSettingsChildrenPath = ['main-settings', 'profile-settings', 'security']
 
-const is = (...routes: string[]) => {
-  const args = Array.from(routes);
-  return args.some((r) => r === route.name);
-};
+const is = (...routes) => {
+  const args = Array.from(routes)
+  return args.some((r) => r === route.name)
+}
+onMounted(() => {
+  if (innerWidth <= 768) {
+    showMobileNav.value = true
+  } else {
+    showMobileNav.value = false
+  }
+})
 </script>
 
 <template>
-  <div
-    class="w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
-    :class="{ 'w-[72px]': sidebarCollapsed }"
-  >
-    <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
-      <Transition name="dissapear">
-        <h1 class="text-[28px] text-white flex-1" v-if="!sidebarCollapsed">Mandarin</h1>
-      </Transition>
-      <img
-        src="@/assets/layout-icons/sidebar-toggler.svg"
-        alt=""
-        class="w-[24px] h-[24px] duration-200 absolute right-6"
-        @click="sidebarCollapsed = !sidebarCollapsed"
-      />
-    </div>
-    <div>
-      <SidebarItem
-        name="Mahsulotlar"
-        link-name="products"
-        icon="lucide:box"
-        :collapsed="sidebarCollapsed"
-      />
-      <SidebarItem
-        name="Analitika"
-        link-name="analytics"
-        icon="flowbite:chart-line-up-outline"
-        :collapsed="sidebarCollapsed"
-      />
-      <SidebarItem
-        name="Sharhlar"
-        link-name="comments"
-        icon="ph:star"
-        :collapsed="sidebarCollapsed"
-      />
-      <SidebarItem
-        name="Obunachilar"
-        link-name="followers"
-        icon="mage:users"
-        :collapsed="sidebarCollapsed"
-      />
-      <SidebarItem
-        name="Sozlamalar"
-        link-name="main-settings"
-        icon="basil:settings-outline"
-        :collapsed="sidebarCollapsed"
-        :class="{ 'router-link-exact-active': is(...dashboardSettingsChildrenPath) }"
-      />
-    </div>
+  <div>
     <div
-      class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28 overflow-hidden"
+    v-if="!showMobileNav"
+      class="w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
+      :class="{ 'w-[72px]': sidebarCollapsed }"
     >
-      <Transition name="dissapear">
-        <div class="flex items-center gap-3 flex-1" v-if="!sidebarCollapsed">
-          <div class="w-[50px] h-[50px] bg-gray-400 rounded-full"></div>
-          <h1 class="text-lg">Rahmatulloh</h1>
-        </div>
-      </Transition>
-      <Icon
-        icon="iconamoon:menu-kebab-vertical-bold"
-        class="w-[24px] h-[24px] absolute right-6"
-      ></Icon>
+      <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
+        <Transition name="dissapear">
+          <h1 class="text-[28px] text-white flex-1" v-if="!sidebarCollapsed">Mandarin</h1>
+        </Transition>
+        <img
+          src="@/assets/layout-icons/sidebar-toggler.svg"
+          alt=""
+          class="w-[24px] h-[24px] duration-200 absolute right-6"
+          @click="sidebarCollapsed = !sidebarCollapsed"
+        />
+      </div>
+      <div>
+        <SidebarItem
+          name="Mahsulotlar"
+          link-name="products"
+          icon="lucide:box"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          name="Analitika"
+          link-name="analytics"
+          icon="flowbite:chart-line-up-outline"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          name="Sharhlar"
+          link-name="comments"
+          icon="ph:star"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          name="Obunachilar"
+          link-name="followers"
+          icon="mage:users"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          name="Sozlamalar"
+          link-name="main-settings"
+          icon="basil:settings-outline"
+          :collapsed="sidebarCollapsed"
+          :class="{ 'router-link-exact-active': is(...dashboardSettingsChildrenPath) }"
+        />
+      </div>
+      <div
+        class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28 overflow-hidden"
+      >
+        <Transition name="dissapear">
+          <div class="flex items-center gap-3 flex-1" v-if="!sidebarCollapsed">
+            <div class="w-[50px] h-[50px] bg-gray-400 rounded-full"></div>
+            <h1 class="text-lg">Rahmatulloh</h1>
+          </div>
+        </Transition>
+        <Icon
+          icon="iconamoon:menu-kebab-vertical-bold"
+          class="w-[24px] h-[24px] absolute right-6"
+        ></Icon>
+      </div>
     </div>
   </div>
 </template>

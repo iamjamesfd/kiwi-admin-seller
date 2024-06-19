@@ -66,7 +66,7 @@ const addVariant = () => {
 <template>
   <DashboardHeader title="Mahsulotlar" />
   <div class="grid grid-cols-12 gap-6 p-5 text-black">
-    <div class="col-span-7 rounded-lg bg-white p-7">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 rounded-lg bg-white p-7">
       <h1 class="text-xl mb-8">Mahsulot yaratish</h1>
       <h3 class="mb-2">Mahsulot nomi <span class="text-[#DA2C2C]">*</span></h3>
       <input
@@ -77,7 +77,7 @@ const addVariant = () => {
       <h3 class="mb-2">Mahsulot tavsifi <span class="text-[#DA2C2C]">*</span></h3>
       <QuillEditor v-model="editorContent" :options="editorOptions"></QuillEditor>
     </div>
-    <div class="col-span-7 p-7 bg-white rounded-lg">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg">
       <h3 class="mb-2">Mahsulot rasmi <span class="text-[#DA2C2C]">*</span></h3>
       <p class="text-[#3A93FF] text-[12px] font-light mb-6">
         Birinchi surat e'loningiz asosiy rasmi bo'ladi.
@@ -102,7 +102,7 @@ const addVariant = () => {
         </div>
       </div>
     </div>
-    <div class="col-span-7 p-7 bg-white rounded-lg">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg">
       <h3 class="mb-2">Mahsulot kategoriyasi <span class="text-[#DA2C2C]">*</span></h3>
       <div class="flex items-center mb-8 justify-between border px-4 py-[14px] rounded-[10px]">
         <p>Kategoriyani tanlang</p>
@@ -121,16 +121,16 @@ const addVariant = () => {
           <span class="slider"></span>
         </label>
       </div>
-      <div v-if="isDeliveryAvalible" class="flex flex-wrap gap-8 mt-5">
+      <div v-if="isDeliveryAvalible" class="flex flex-col flex-wrap gap-3 mt-5 min-[550px]:flex-row min-[550px]:gap-8">
         <div>
-          <h3 class="mb-2 text-sm">Yetkazib berish xizmati</h3>
+          <h3 class="mb-1 text-sm">Yetkazib berish xizmati</h3>
           <input
             type="text"
             placeholder="Xizmat narxini kiriting"
             class="w-[254px] block p-3 rounded-lg border outline-none"
           />
         </div>
-        <div class="flex gap-4 relative top-10">
+        <div class="flex gap-4 min-[550px]:relative min-[550px]:top-9">
           <p>Bepul</p>
           <label class="switch">
             <input type="checkbox" />
@@ -139,7 +139,7 @@ const addVariant = () => {
         </div>
       </div>
     </div>
-    <div class="col-span-7 p-7 bg-white rounded-lg">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg">
       <h1 class="text-xl mb-8">Variant</h1>
       <div ref="variants"></div>
       <!-- <div>
@@ -149,7 +149,7 @@ const addVariant = () => {
         <Icon icon="ph:plus-bold"></Icon>Hajmi yoki rangi kabi variantlarni qo'shing
       </p>
     </div>
-    <div class="col-span-7 p-7 bg-white rounded-lg flex gap-4 flex-wrap">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg flex gap-4 flex-wrap">
       <div>
         <h3 class="mb-2">Narxi<span class="text-[#DA2C2C]">*</span></h3>
         <div class="flex gap-2 max-w-[300px]">
@@ -178,7 +178,7 @@ const addVariant = () => {
         />
       </div>
     </div>
-    <div class="col-span-7 flex items-center justify-end gap-6">
+    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 flex items-center flex-wrap min-[430px]:justify-end gap-6">
       <button>Bekor qilish</button>
       <button class="bg-white py-[10px] px-[32px] rounded-lg">Ko'rish</button>
       <button class='bg-[#FF6200] text-white py-[10px] px-[32px] rounded-lg'>Chop etish</button>

@@ -29,7 +29,7 @@ import { RouterLink } from 'vue-router';
     <div class="col-span-8 rounded-lg bg-white">
       <div class="border-b">
         <ul class="flex">
-          <li><RouterLink :to="{name: 'main-settings'}" class='0px-4 py-2 block'>Asosiy sozlamalar</RouterLink></li>
+          <li><RouterLink :to="{name: 'main-settings'}" class='px-4 py-2 block'>Asosiy sozlamalar</RouterLink></li>
           <li><RouterLink :to="{name: 'profile-settings'}" class='px-4 py-2 block'>Profil sozlamalari</RouterLink></li>
           <li><RouterLink :to="{name: 'security'}" class='px-4 py-2 block'>Xavfsizlik</RouterLink></li>
         </ul>

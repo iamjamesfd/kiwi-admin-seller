@@ -24,10 +24,10 @@ const props = defineProps([
 //   // DropdownMenuSubContent,
 //   // DropdownMenuSubTrigger,
 //   DropdownMenuTrigger,
-// } from '@/components/ui/dropdown-menu'
+// } from '@/components/ui/dropdown-menu' col-span-12
 </script>
 <template>
-  <div class="col-span-3 bg-white border-b-2 rounded-lg">
+  <div class="min-w-[230px] flex-0 min-[480px]:col-span-6 min-[760px]:col-span-4 lg:col-span-3 bg-white border-b-2 rounded-lg">
     <div class="w-full h-[166px] bg-gray-500 rounded-t-lg"></div>
     <div class="p-4 text-sm">
       <div class="flex items-center justify-between">
@@ -143,41 +143,41 @@ const props = defineProps([
           </DropdownMenuContent>
         </DropdownMenu>
         -->
-        <div class="dropdown dropdown-end dropdown-hover">
-          <div tabindex="0" role="button" class="m-1"></div>
+      <!-- <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="m-1"></div>
 
-          <ul
-            tabindex="0"
-            class="dropdown-content -mt-1 z-[1] menu shadow border bg-white text-black rounded-box"
-          >
-            <li>
-              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
-                >Sotuvda yo'q</a
-              >
-            </li>
-            <li>
-              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
-                >Berkitish</a
-              >
-            </li>
-            <li>
-              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
-                >E'lonni ko'tarish</a
-              >
-            </li>
-            <li>
-              <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
-                >Tahrirlash</a
-              >
-            </li>
-            <li>
-              <a
-                class="px-4 whitespace-nowrap text-[#DA2C2C] active:!bg-slate-300 active:!text-[#DA2C2C]"
-                >E'lonni o'chirish</a
-              >
-            </li>
-          </ul>
-        </div>
+        <ul
+          tabindex="0"
+          class="dropdown-content -mt-1 z-[1] menu shadow border bg-white text-black rounded-box"
+        >
+          <li>
+            <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+              >Sotuvda yo'q</a
+            >
+          </li>
+          <li>
+            <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+              >Berkitish</a
+            >
+          </li>
+          <li>
+            <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+              >E'lonni ko'tarish</a
+            >
+          </li>
+          <li>
+            <a class="px-4 whitespace-nowrap active:!bg-slate-300 active:!text-black"
+              >Tahrirlash</a
+            >
+          </li>
+          <li>
+            <a
+              class="px-4 whitespace-nowrap text-[#DA2C2C] active:!bg-slate-300 active:!text-[#DA2C2C]"
+              >E'lonni o'chirish</a
+            >
+          </li>
+        </ul>
+      </div> -->
       
       </div>
       <div class="text-black">
