@@ -1,13 +1,12 @@
 <script setup>
 import { Icon } from '@iconify/vue'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import SidebarItem from '../common/SidebarItem.vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
 const sidebarCollapsed = ref(true)
-const showMobileNav = ref(false)
 
 const dashboardSettingsChildrenPath = ['main-settings', 'profile-settings', 'security']
 
@@ -15,19 +14,25 @@ const is = (...routes) => {
   const args = Array.from(routes)
   return args.some((r) => r === route.name)
 }
-onMounted(() => {
-  if (innerWidth <= 583) {
-    showMobileNav.value = true
+
+const showSidebar = ref(true)
+
+window.onresize = () => {
+  if(innerWidth > 583) {
+    showSidebar.value = true
   } else {
-    showMobileNav.value = false
+    showSidebar.value = false
   }
-})
+}
+
+
+
 </script>
 
 <template>
   <div>
     <div
-      v-if="!showMobileNav"
+      v-if="showSidebar"
       class="min-[583px]:w-[260px] min-[1024px]:w-[312px] h-[100svh] bg-[#26282D] relative duration-500 overflow-hidden"
       :class="{ '!w-[72px]': sidebarCollapsed }"
     >
@@ -90,7 +95,7 @@ onMounted(() => {
         ></Icon>
       </div>
     </div>
-    <div v-if="showMobileNav" class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
+    <div v-if="!showSidebar"  class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
       <div class="flex justify-between">
         <SidebarItem
           class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
