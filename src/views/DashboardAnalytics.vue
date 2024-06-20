@@ -133,10 +133,8 @@ const body = [
         <span class="font-light">O'tgan oydan 18% ko'p</span>
       </p>
     </div>
-    <div
-      class="col-span-12 min-[500px]:col-span-6 min-[768px]:col-span-4 min-[1024px]:col-span-3"
-    ></div>
-    <div class="col-span-12 overflow-hidden rounded-lg">
+  
+    <div class=" col-span-12 min-[1024px]:col-span-9  overflow-hidden rounded-lg">
       <div class="pt-4 bg-white rounded-[10px]">
         <div class="flex items-center justify-between px-4">
           <h1 class="text-xl text-black">Top mahsulotlar</h1>
@@ -148,7 +146,7 @@ const body = [
           </select>
         </div>
         <div class="overflow-auto">
-          <VirtualTable :head :body class="min-w-[768px] min-[768px]:w-full bg-white"/>
+          <VirtualTable :head :body class="min-w-[692px] min-[768px]:w-full bg-white"/>
         </div>
       </div>
     </div>

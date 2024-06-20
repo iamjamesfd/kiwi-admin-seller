@@ -1,4 +1,4 @@
-<script setup >
+<script setup>
 import { ref, onMounted } from 'vue'
 
 import { QuillEditor } from '@vueup/vue-quill'
@@ -62,7 +62,6 @@ const addVariant = () => {
   variants.value.innerHTML += '<h1>hello world</h1>'
 }
 
-
 </script>
 
 <template>
@@ -110,7 +109,6 @@ const addVariant = () => {
         <p>Kategoriyani tanlang</p>
         <Icon icon="icon-park:down"></Icon>
       </div>
-      
 
       <h3 class="mb-2">Kalit so'zlar <span class="text-[#DA2C2C]">*</span></h3>
       <input

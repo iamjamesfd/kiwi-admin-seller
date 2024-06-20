@@ -1,6 +1,6 @@
 
 <template>
-  <div class="custom-select uppercase" :tabindex="tabindex" @blur="open = false">
+  <div class="uppercase" :tabindex="tabindex" @blur="open = false">
     <div class=" flex items-center justify-between gap-[6px] outline-none border rounded-xl px-4" :class="{ open: open }" @click="open = !open">
         <Icon icon="emojione:green-apple"></Icon>
         <p class="text-[12px]">{{ selected }}</p>
