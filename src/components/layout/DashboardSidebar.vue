@@ -16,7 +16,7 @@ const is = (...routes) => {
   return args.some((r) => r === route.name)
 }
 onMounted(() => {
-  if (innerWidth <= 768) {
+  if (innerWidth <= 583) {
     showMobileNav.value = true
   } else {
     showMobileNav.value = false
@@ -27,9 +27,9 @@ onMounted(() => {
 <template>
   <div>
     <div
-    v-if="!showMobileNav"
-      class="w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
-      :class="{ 'w-[72px]': sidebarCollapsed }"
+      v-if="!showMobileNav"
+      class="min-[583px]:w-[260px] min-[1024px]:w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
+      :class="{ '!w-[72px]': sidebarCollapsed }"
     >
       <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
         <Transition name="dissapear">
@@ -88,6 +88,41 @@ onMounted(() => {
           icon="iconamoon:menu-kebab-vertical-bold"
           class="w-[24px] h-[24px] absolute right-6"
         ></Icon>
+      </div>
+    </div>
+    <div v-if="showMobileNav" class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
+      <div class="flex justify-between">
+        <SidebarItem
+          class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
+          link-name="products"
+          icon="lucide:box"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
+          link-name="analytics"
+          icon="flowbite:chart-line-up-outline"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
+          link-name="comments"
+          icon="ph:star"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
+          link-name="followers"
+          icon="mage:users"
+          :collapsed="sidebarCollapsed"
+        />
+        <SidebarItem
+          class="max-[583px]:flex-1 max-[583px]:border-b max-[583px]:h-[72px] max-[583px]:!p-0"
+          link-name="main-settings"
+          icon="basil:settings-outline"
+          :collapsed="sidebarCollapsed"
+          :class="{ 'router-link-exact-active': is(...dashboardSettingsChildrenPath) }"
+        />
       </div>
     </div>
   </div>

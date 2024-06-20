@@ -35,9 +35,12 @@ import ProductCard from '@/components/common/ProductCard.vue'
       </RouterLink>
     </div>
   </div>
-  <!-- grid grid-cols-12 -->
+  <!-- 
+  grid grid-cols-12
+
+  -->
   <div class="@container">
-  <div class="@3xl:grid-cols-4 @6xl:grid-cols-5 @7xl:grid-cols-6 grid grid-cols-3 gap-4 px-6 pb-5">
+  <div class="grid @sm:grid-cols-1 @lg:grid-cols-2 @2xl:grid-cols-3 @4xl:grid-cols-4 @6xl:grid-cols-5 gap-4 px-6 pb-5">
     <ProductCard
       v-for="x in data"
       :key="x"
