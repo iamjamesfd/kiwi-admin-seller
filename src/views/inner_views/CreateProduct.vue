@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 import { ref, onMounted } from 'vue'
 
 import { QuillEditor } from '@vueup/vue-quill'
@@ -61,6 +61,8 @@ const variants = ref(null)
 const addVariant = () => {
   variants.value.innerHTML += '<h1>hello world</h1>'
 }
+
+
 </script>
 
 <template>
@@ -108,6 +110,8 @@ const addVariant = () => {
         <p>Kategoriyani tanlang</p>
         <Icon icon="icon-park:down"></Icon>
       </div>
+      
+
       <h3 class="mb-2">Kalit so'zlar <span class="text-[#DA2C2C]">*</span></h3>
       <input
         type="text"
@@ -121,7 +125,10 @@ const addVariant = () => {
           <span class="slider"></span>
         </label>
       </div>
-      <div v-if="isDeliveryAvalible" class="flex flex-col flex-wrap gap-3 mt-5 min-[550px]:flex-row min-[550px]:gap-8">
+      <div
+        v-if="isDeliveryAvalible"
+        class="flex flex-col flex-wrap gap-3 mt-5 min-[550px]:flex-row min-[550px]:gap-8"
+      >
         <div>
           <h3 class="mb-1 text-sm">Yetkazib berish xizmati</h3>
           <input
@@ -149,7 +156,9 @@ const addVariant = () => {
         <Icon icon="ph:plus-bold"></Icon>Hajmi yoki rangi kabi variantlarni qo'shing
       </p>
     </div>
-    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg flex gap-4 flex-wrap">
+    <div
+      class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg flex gap-4 flex-wrap"
+    >
       <div>
         <h3 class="mb-2">Narxi<span class="text-[#DA2C2C]">*</span></h3>
         <div class="flex gap-2 max-w-[300px]">
@@ -178,10 +187,12 @@ const addVariant = () => {
         />
       </div>
     </div>
-    <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 flex items-center flex-wrap min-[430px]:justify-end gap-6">
+    <div
+      class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 flex items-center flex-wrap min-[430px]:justify-end gap-6"
+    >
       <button>Bekor qilish</button>
       <button class="bg-white py-[10px] px-[32px] rounded-lg">Ko'rish</button>
-      <button class='bg-[#FF6200] text-white py-[10px] px-[32px] rounded-lg'>Chop etish</button>
+      <button class="bg-[#FF6200] text-white py-[10px] px-[32px] rounded-lg">Chop etish</button>
     </div>
   </div>
 </template>

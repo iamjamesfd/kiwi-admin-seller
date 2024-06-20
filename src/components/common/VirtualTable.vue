@@ -5,7 +5,7 @@ const props = defineProps(['head', 'body'])
 </script>
 
 <template>
-  <table class="w-full">
+  <table>
     <thead class="text-center text-sm">
       <tr>
         <td v-for="x in props.head" :key="x">
