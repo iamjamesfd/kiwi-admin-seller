@@ -28,7 +28,7 @@ onMounted(() => {
   <div>
     <div
       v-if="!showMobileNav"
-      class="min-[583px]:w-[260px] min-[1024px]:w-[312px] h-screen bg-[#26282D] relative duration-500 overflow-hidden"
+      class="min-[583px]:w-[260px] min-[1024px]:w-[312px] h-[100svh] bg-[#26282D] relative duration-500 overflow-hidden"
       :class="{ '!w-[72px]': sidebarCollapsed }"
     >
       <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
