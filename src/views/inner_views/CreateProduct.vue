@@ -61,7 +61,6 @@ const variants = ref(null)
 const addVariant = () => {
   variants.value.innerHTML += '<h1>hello world</h1>'
 }
-
 </script>
 
 <template>
@@ -148,8 +147,8 @@ const addVariant = () => {
       <h1 class="text-xl mb-8">Variant</h1>
       <div ref="variants"></div>
       <!-- <div>
-        <h3 class="mb-2">Variant nomi <span class="text-[#DA2C2C]">*</span></h3>
-      </div> -->
+<h3 class="mb-2">Variant nomi <span class="text-[#DA2C2C]">*</span></h3>
+</div> -->
       <p class="flex items-center text-[#2563EB] gap-3 cursor-default" @click="addVariant">
         <Icon icon="ph:plus-bold"></Icon>Hajmi yoki rangi kabi variantlarni qo'shing
       </p>
@@ -165,7 +164,9 @@ const addVariant = () => {
             placeholder="Narxini kiriting"
             class="w-full p-3 rounded-[10px] flex-1 border outline-none"
           />
-          <SelectInput :options="['uzs', 'usd']" :default="'uzs'" class="select"></SelectInput>
+          <SelectInput :options="['uzs', 'usd']" :default="'uzs'" class="select">
+            <template #hello>hi</template>
+          </SelectInput>
         </div>
       </div>
       <div>

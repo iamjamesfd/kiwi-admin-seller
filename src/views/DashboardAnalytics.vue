@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { Icon } from '@iconify/vue'
 // import { data } from '@/store'
 
@@ -98,9 +98,10 @@ const body = [
 
 <template>
   <DashboardHeader title="Analitika" />
-  <div class="grid grid-cols-12 gap-3 p-6">
+  <div class="gap-3 p-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
     <div
-      class="bg-white p-5 space-y-2 rounded-[10px] col-span-12 min-[500px]:col-span-6 min-[768px]:col-span-4 min-[1024px]:col-span-3"
+      class="bg-white p-5 space-y-2 rounded-[10px] "
     >
       <h3 class="text-sm">Yoqtirilganlar</h3>
       <h1 class="text-black text-2xl font-semibold">
@@ -112,7 +113,7 @@ const body = [
       </p>
     </div>
     <div
-      class="bg-white p-5 space-y-2 rounded-[10px] col-span-12 min-[500px]:col-span-6 min-[768px]:col-span-4 min-[1024px]:col-span-3"
+      class="bg-white p-5 space-y-2 rounded-[10px]"
     >
       <h3 class="text-sm">Obunachilar</h3>
       <h1 class="text-black text-2xl font-semibold">121 123</h1>
@@ -122,7 +123,7 @@ const body = [
       </p>
     </div>
     <div
-      class="bg-white p-5 space-y-2 rounded-[10px] col-span-12 min-[500px]:col-span-6 min-[768px]:col-span-4 min-[1024px]:col-span-3"
+      class="bg-white p-5 space-y-2 rounded-[10px]"
     >
       <h3 class="text-sm">Mahsulotlar summasi</h3>
       <h1 class="text-black text-2xl font-semibold">
@@ -133,8 +134,8 @@ const body = [
         <span class="font-light">O'tgan oydan 18% ko'p</span>
       </p>
     </div>
-  
-    <div class=" col-span-12 min-[1024px]:col-span-9  overflow-hidden rounded-lg">
+  </div>
+    <div class="overflow-hidden rounded-lg">
       <div class="pt-4 bg-white rounded-[10px]">
         <div class="flex items-center justify-between px-4">
           <h1 class="text-xl text-black">Top mahsulotlar</h1>
