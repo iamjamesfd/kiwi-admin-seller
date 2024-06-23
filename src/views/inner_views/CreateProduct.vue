@@ -1,13 +1,11 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-
-import { QuillEditor } from '@vueup/vue-quill'
 import { Icon } from '@iconify/vue'
-
-import DashboardHeader from '@/components/layout/DashboardHeader.vue'
-import SelectInput from '@/components/common/SelectInput.vue'
-
+import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
+import { options } from '@/store'
+import DashboardHeader from '@/components/layout/DashboardHeader.vue'
+import VueSelect from '@/components/common/VueSelect.vue'
 
 const editorContent = ref('')
 const editorOptions = ref({
@@ -104,12 +102,16 @@ const addVariant = () => {
     </div>
     <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg">
       <h3 class="mb-2">Mahsulot kategoriyasi <span class="text-[#DA2C2C]">*</span></h3>
-      <div class="flex items-center mb-8 justify-between border px-4 py-[14px] rounded-[10px]">
-        <p>Kategoriyani tanlang</p>
-        <Icon icon="icon-park:down"></Icon>
-      </div>
+      <vue-select :options="options" :default="'Kategoriyani tanlang'" optionType="Object">
+        <template #option="{ option }">
+          <div class="px-3 py-3 hover:bg-slate-100 hover:text-[#FF6200] flex items-center gap-4">
+            <img :src="option.image" />
+            <p>{{ option.name }}</p>
+          </div>
+        </template>
+      </vue-select>
 
-      <h3 class="mb-2">Kalit so'zlar <span class="text-[#DA2C2C]">*</span></h3>
+      <h3 class="mb-2 mt-8">Kalit so'zlar <span class="text-[#DA2C2C]">*</span></h3>
       <input
         type="text"
         placeholder="Misol uchun: oyoq kiyim"
@@ -164,9 +166,16 @@ const addVariant = () => {
             placeholder="Narxini kiriting"
             class="w-full p-3 rounded-[10px] flex-1 border outline-none"
           />
-          <SelectInput :options="['uzs', 'usd']" :default="'uzs'" class="select">
-            <template #hello>hi</template>
-          </SelectInput>
+          <vue-select :options="['UZS', 'USD']" :default="'USD'" optionType="String">
+            <template #icon>
+              <Icon icon="emojione:green-apple"></Icon>
+            </template>
+            <template #option="{ option }">
+              <div class="px-3 py-2 hover:bg-slate-300">
+                {{ option }}
+              </div>
+            </template>
+          </vue-select>
         </div>
       </div>
       <div>

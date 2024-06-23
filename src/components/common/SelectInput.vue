@@ -1,16 +1,14 @@
 <template>
   <div class="relative leading-[50px] uppercase" :tabindex="tabindex" @blur="open = false">
-    <slot name="hello">
-      <div
-        class="flex items-center justify-between gap-[6px] outline-none border rounded-xl px-4"
-        :class="{ open: open }"
-        @click="open = !open"
-      >
-        <Icon icon="emojione:green-apple"></Icon>
-        <p class="text-[12px]">{{ selected }}</p>
-        <Icon icon="formkit:down" class="w-4 h-[7px]"></Icon>
-      </div>
-    </slot>
+    <div
+      class="flex items-center justify-between gap-[6px] outline-none border rounded-xl px-4"
+      :class="{ open: open }"
+      @click="open = !open"
+    >
+      <Icon icon="emojione:green-apple"></Icon>
+      <p class="text-[12px]">{{ selected }}</p>
+      <Icon icon="formkit:down" class="w-4 h-[7px]"></Icon>
+    </div>
     <div
       class="absolute mt-1 text-[12px] overflow-hidden text-black bg-white w-full border shadow rounded-lg"
       :class="{ selectHide: !open }"
@@ -19,11 +17,7 @@
         class="hover:bg-slate-300 px-4"
         v-for="(option, i) of options"
         :key="i"
-        @click="
-          selected = option
-          open = false
-          $emit('input', option)
-        "
+        @click="(selected = option), (open = false), $emit('input', option)"
       >
         {{ option }}
       </div>

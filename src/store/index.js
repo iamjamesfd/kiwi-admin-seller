@@ -80,20 +80,77 @@ export const data = [
   },
 ]
 
-// export const variants = reactive([
-//   {
-//     title: 'Colors',
-//     variantOptions: [
-//       {
-//         title: 'Red',
-//         price: null,
-//         innerOptions: []
-//       },
-//       {
-//         title: 'Green',
-//         price: null,
-//         innerOptions: []
-//       }
-//     ]
-//   }
-// ])
+import img_01 from '@/assets/categories/image_01.png'
+import img_02 from '@/assets/categories/image_02.png'
+import img_03 from '@/assets/categories/image_03.png'
+import img_04 from '@/assets/categories/image_04.png'
+import img_05 from '@/assets/categories/image_05.png'
+import img_06 from '@/assets/categories/image_06.png'
+import img_07 from '@/assets/categories/image_07.png'
+import img_08 from '@/assets/categories/image_08.png'
+import img_09 from '@/assets/categories/image_09.png'
+import img_10 from '@/assets/categories/image_10.png'
+import img_11 from '@/assets/categories/image_11.png'
+import img_12 from '@/assets/categories/image_12.png'
+import img_13 from '@/assets/categories/image_13.png'
+import img_14 from '@/assets/categories/image_14.png'
+
+export const options = [
+  {
+    name: 'Avtomobillar',
+    image: img_01
+  },
+  {
+    name: 'Elektronika',
+    image: img_02
+  },
+  {
+    name: 'Ish bor',
+    image: img_03
+  },
+  {
+    name: 'Uy jihozlari',
+    image: img_04
+  },
+  {
+    name: 'Uy joy',
+    image: img_05
+  },
+  {
+    name: "Mo'da va stil",
+    image: img_06
+  },
+  {
+    name: 'Kitoblar olami',
+    image: img_07
+  },
+  {
+    name: 'Sport va hobbi',
+    image: img_08
+  },
+  {
+    name: "Ko'ngil ochar o'yinlar",
+    image: img_09
+  },
+  {
+    name: 'Maishiy texnika',
+    image: img_10
+  },
+  {
+    name: 'Bolalar buyumlari',
+    image: img_11
+  },
+  {
+    name: 'Ish qurollari',
+    image: img_12
+  },
+  {
+    name: "Bog'dorchilik",
+    image: img_13
+  },
+  {
+    name: 'Gullar',
+    image: img_14
+  }
+]
+
