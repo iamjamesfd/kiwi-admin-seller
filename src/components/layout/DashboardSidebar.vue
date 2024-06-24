@@ -106,31 +106,31 @@ onMounted(handleResize); // Call on component mount and resize
     <div v-if="!isLargeScreen" class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
       <div class="flex justify-between">
         <SidebarItem
-          class="max-[768px]:flex-1 max-[768px]:border-b max-[768px]:h-[72px] max-[768px]:!p-0"
+          class="max-[768px]:flex-1 max-[768px]:border-b-[2px] max-[768px]:h-[72px] max-[768px]:!p-0"
           link-name="products"
           icon="lucide:box"
           :collapsed="sidebarCollapsed"
         />
         <SidebarItem
-          class="max-[768px]:flex-1 max-[768px]:border-b max-[768px]:h-[72px] max-[768px]:!p-0"
+          class="max-[768px]:flex-1 max-[768px]:border-b-[2px] max-[768px]:h-[72px] max-[768px]:!p-0"
           link-name="analytics"
           icon="flowbite:chart-line-up-outline"
           :collapsed="sidebarCollapsed"
         />
         <SidebarItem
-          class="max-[768px]:flex-1 max-[768px]:border-b max-[768px]:h-[72px] max-[768px]:!p-0"
+          class="max-[768px]:flex-1 max-[768px]:border-b-[2px] max-[768px]:h-[72px] max-[768px]:!p-0"
           link-name="comments"
           icon="ph:star"
           :collapsed="sidebarCollapsed"
         />
         <SidebarItem
-          class="max-[768px]:flex-1 max-[768px]:border-b max-[768px]:h-[72px] max-[768px]:!p-0"
+          class="max-[768px]:flex-1 max-[768px]:border-b-[2px] max-[768px]:h-[72px] max-[768px]:!p-0"
           link-name="followers"
           icon="mage:users"
           :collapsed="sidebarCollapsed"
         />
         <SidebarItem
-          class="max-[768px]:flex-1 max-[768px]:border-b max-[768px]:h-[72px] max-[768px]:!p-0"
+          class="max-[768px]:flex-1 max-[768px]:border-b-[2px] max-[768px]:h-[72px] max-[768px]:!p-0"
           link-name="main-settings"
           icon="basil:settings-outline"
           :collapsed="sidebarCollapsed"
