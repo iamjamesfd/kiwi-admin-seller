@@ -3,7 +3,7 @@ import { Icon } from '@iconify/vue';
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-6 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
     <div>
       <h1 class="text-sm mb-2">Do'kon nomi</h1>
       <input
@@ -32,7 +32,7 @@ import { Icon } from '@iconify/vue';
       />
     </div>
     <div class="text-[#FF6200] flex flex-col">
-      <h1 class="invisible">clear space</h1>
+      <h1 class="hidden md:block md:invisible">clear space</h1>
       <div class="flex items-center flex-1 gap-2 cursor-pointer">
         <Icon icon="solar:map-linear" class="w-[18px] h-[18px]"></Icon>
         <p>Kartadan korsatish</p>

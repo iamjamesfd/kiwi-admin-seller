@@ -43,7 +43,7 @@ const select = (option) => {
       {{ selected }}
       <Icon icon="icon-park:down"></Icon>
     </div>
-    <div v-if="isOpen" class="relative z-[9999]">
+    <div v-if="isOpen" class="relative z-[999]">
       <ul class="bg-white w-full shadow border rounded-lg mt-1 overflow-hidden text-sm absolute">
         <li v-for="(option, i) of props.options" :key="i" @click="select(option)">
           <slot name="option" :option="option"></slot>
