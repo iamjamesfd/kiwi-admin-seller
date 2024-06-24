@@ -27,7 +27,7 @@ import ProductCard from '@/components/common/ProductCard.vue'
         <span class="whitespace-nowrap">Filterlash</span>
       </div>
       <RouterLink
-        :to="{name: 'create-product'}"
+        :to="{ name: 'create-product' }"
         class="w-fit flex items-center gap-2 py-2 px-4 bg-[#0EB182] text-white rounded-lg cursor-pointer"
       >
         <Icon icon="gala:add" class="w-[24px] h-[24px]"></Icon>
@@ -35,25 +35,24 @@ import ProductCard from '@/components/common/ProductCard.vue'
       </RouterLink>
     </div>
   </div>
-  <!-- 
-  grid grid-cols-12
-
-  -->
   <div class="@container">
-  <div class="grid @sm:grid-cols-1 @lg:grid-cols-2 @2xl:grid-cols-3 @4xl:grid-cols-4 @6xl:grid-cols-5 gap-4 px-6 pb-5">
-    <ProductCard
-      v-for="x in data"
-      :key="x"
-      :onSold="x.onSold"
-      :id="x.id"
-      :rating="x.rating"
-      :views="x.views"
-      :sold="x.sold"
-      :refund="x.refund"
-      :drawback="x.drawback"
-      :name="x.name"
-      :price="x.price"
-    />
+    <div
+      class="grid @sm:grid-cols-1 @lg:grid-cols-2 @2xl:grid-cols-3 @4xl:grid-cols-4 @6xl:grid-cols-5 gap-4 px-6 pb-5"
+    >
+      <ProductCard
+        v-for="(x, i) in data"
+        :key="x"
+        :onSold="x.onSold"
+        :id="x.id"
+        :rating="x.rating"
+        :views="x.views"
+        :sold="x.sold"
+        :refund="x.refund"
+        :drawback="x.drawback"
+        :name="x.name"
+        :price="x.price"
+        :i="i"
+      />
+    </div>
   </div>
-</div>
 </template>

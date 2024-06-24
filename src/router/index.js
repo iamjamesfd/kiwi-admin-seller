@@ -10,6 +10,8 @@ import ProfileSettings from '@/views/inner_views/Settings/ProfileSettings.vue'
 import GeneralSecurity from '@/views/inner_views/Settings/GeneralSecurity.vue'
 import DashboardUserProfile from '@/views/DashboardUserProfile.vue'
 
+import BoostProduct from '@/views/inner_views/BoostProduct.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +20,11 @@ const router = createRouter({
       path: '/',
       name: 'products',
       component: DashboardProducts
+    },
+    {
+      path: '/products/:id',
+      name: 'boost-product',
+      component: BoostProduct,
     },
     {
       path: '/create-product',

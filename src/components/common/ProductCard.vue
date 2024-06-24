@@ -13,7 +13,8 @@ const props = defineProps([
   'refund',
   'drawback',
   'name',
-  'price'
+  'price',
+  'i'
 ])
 const showModal = ref(false)
 
@@ -48,9 +49,13 @@ onClickOutside(target, () => {
           >
             <li><RouterLink to="#" @click="console.log(21)">Berkitish</RouterLink></li>
             <li><RouterLink to="#" @click="console.log(21)">Sotuvda yo'q</RouterLink></li>
-            <li><RouterLink to="#" @click="console.log(21)">E'lonni ko'tarish</RouterLink></li>
+            <li><RouterLink :to="'/products/' + props.i" @click="console.log(21)">E'lonni ko'tarish</RouterLink></li>
             <li><RouterLink to="#" @click="console.log(21)">Tahrirlash</RouterLink></li>
-            <li><RouterLink to="#" @click="console.log(21)" class="text-[#DA2C2C]">E'lonni o'chirish</RouterLink></li>
+            <li>
+              <RouterLink to="#" @click="console.log(21)" class="text-[#DA2C2C]"
+                >E'lonni o'chirish</RouterLink
+              >
+            </li>
           </ul>
         </div>
       </div>
