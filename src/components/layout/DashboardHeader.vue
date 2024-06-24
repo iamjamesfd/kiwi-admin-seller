@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import {Icon} from '@iconify/vue'
 
 const props = defineProps(['title'])

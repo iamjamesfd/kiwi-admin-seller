@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import { Icon } from '@iconify/vue'
-import DashboardHeader from '@/components/layout/DashboardHeader.vue'
+import DashboardHeader from "@/components/layout/DashboardHeader.vue"
 import { RouterLink } from 'vue-router';
 </script>
 

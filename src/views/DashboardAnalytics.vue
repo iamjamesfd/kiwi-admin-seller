@@ -99,44 +99,38 @@ const body = [
 <template>
   <DashboardHeader title="Analitika" />
   <div class="gap-3 p-6">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-    <div
-      class="bg-white p-5 space-y-2 rounded-[10px] "
-    >
-      <h3 class="text-sm">Yoqtirilganlar</h3>
-      <h1 class="text-black text-2xl font-semibold">
-        121 123 213 <span class="text-base">so'm</span>
-      </h1>
-      <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
-        <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
-        <span class="font-light">O'tgan oydan 18% ko'p</span>
-      </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-3">
+      <div class="bg-white p-5 space-y-2 rounded-[10px]">
+        <h3 class="text-sm">Yoqtirilganlar</h3>
+        <h1 class="text-black text-2xl font-semibold">
+          121 123 213 <span class="text-base">so'm</span>
+        </h1>
+        <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
+          <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
+          <span class="font-light">O'tgan oydan 18% ko'p</span>
+        </p>
+      </div>
+      <div class="bg-white p-5 space-y-2 rounded-[10px]">
+        <h3 class="text-sm">Obunachilar</h3>
+        <h1 class="text-black text-2xl font-semibold">121 123</h1>
+        <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
+          <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
+          <span class="font-light">O'tgan oydan 18% ko'p</span>
+        </p>
+      </div>
+      <div class="bg-white p-5 space-y-2 rounded-[10px]">
+        <h3 class="text-sm">Mahsulotlar summasi</h3>
+        <h1 class="text-black text-2xl font-semibold">
+          121 123 213 <span class="text-base">so'm</span>
+        </h1>
+        <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
+          <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
+          <span class="font-light">O'tgan oydan 18% ko'p</span>
+        </p>
+      </div>
     </div>
-    <div
-      class="bg-white p-5 space-y-2 rounded-[10px]"
-    >
-      <h3 class="text-sm">Obunachilar</h3>
-      <h1 class="text-black text-2xl font-semibold">121 123</h1>
-      <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
-        <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
-        <span class="font-light">O'tgan oydan 18% ko'p</span>
-      </p>
-    </div>
-    <div
-      class="bg-white p-5 space-y-2 rounded-[10px]"
-    >
-      <h3 class="text-sm">Mahsulotlar summasi</h3>
-      <h1 class="text-black text-2xl font-semibold">
-        121 123 213 <span class="text-base">so'm</span>
-      </h1>
-      <p class="text-[#2EC076] text-[12px] flex items-center gap-2">
-        <Icon icon="iconoir:stat-up" class="w-4 h-4"></Icon>
-        <span class="font-light">O'tgan oydan 18% ko'p</span>
-      </p>
-    </div>
-  </div>
-    <div class="overflow-hidden rounded-lg">
-      <div class="pt-4 bg-white rounded-[10px]">
+    <div class="overflow-hidden rounded-lg mt-3 lg:w-3/4">
+      <div class="pt-4 bg-white rounded-[10px] ">
         <div class="flex items-center justify-between px-4">
           <h1 class="text-xl text-black">Top mahsulotlar</h1>
           <select class="bg-white border px-3 py-2 rounded-lg  text-black text-sm">

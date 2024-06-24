@@ -62,7 +62,7 @@ const addVariant = () => {
 </script>
 
 <template>
-  <DashboardHeader title="Mahsulotlar" />
+  <DashboardHeader title="Mahsulot yaratish" />
   <div class="grid grid-cols-12 gap-6 p-5 text-black">
     <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 rounded-lg bg-white p-7">
       <h1 class="text-xl mb-8">Mahsulot yaratish</h1>

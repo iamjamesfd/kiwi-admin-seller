@@ -1,5 +1,9 @@
+<!-- eslint-disable vue/no-parsing-error -->
 <script setup lang="tsx">
-// import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue'
+import { ref } from 'vue'
+import { onClickOutside } from '@vueuse/core'
+
 const props = defineProps([
   'onSold',
   'id',
@@ -11,20 +15,12 @@ const props = defineProps([
   'name',
   'price'
 ])
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuGroup,
-//   DropdownMenuItem,
-//   // DropdownMenuLabel,
-//   // DropdownMenuPortal,
-//   // DropdownMenuSeparator,
-//   // DropdownMenuShortcut,
-//   // DropdownMenuSub,
-//   // DropdownMenuSubContent,
-//   // DropdownMenuSubTrigger,
-//   DropdownMenuTrigger,
-// } from '@/components/ui/dropdown-menu' col-span-12
+const showModal = ref(false)
+
+const target = ref(null)
+onClickOutside(target, () => {
+  showModal.value = false
+})
 </script>
 <template>
   <div class="bg-white border-b-2 rounded-lg">
@@ -44,7 +40,19 @@ const props = defineProps([
           Sotuvda yo'q
         </div>
 
-
+        <div class="dropdown relative" ref="target" @click="showModal = !showModal">
+          <Icon icon="iconamoon:menu-kebab-horizontal-bold"></Icon>
+          <ul
+            :class="{ '!block': showModal }"
+            class="hidden absolute right-0 bg-white shadow border whitespace-nowrap overflow-hidden rounded-lg"
+          >
+            <li><RouterLink to="#" @click="console.log(21)">Berkitish</RouterLink></li>
+            <li><RouterLink to="#" @click="console.log(21)">Sotuvda yo'q</RouterLink></li>
+            <li><RouterLink to="#" @click="console.log(21)">E'lonni ko'tarish</RouterLink></li>
+            <li><RouterLink to="#" @click="console.log(21)">Tahrirlash</RouterLink></li>
+            <li><RouterLink to="#" @click="console.log(21)">E'lonni o'chirish</RouterLink></li>
+          </ul>
+        </div>
         <!-- s
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
@@ -143,7 +151,7 @@ const props = defineProps([
           </DropdownMenuContent>
         </DropdownMenu>
         -->
-      <!-- <div class="dropdown dropdown-end dropdown-hover">
+        <!-- <div class="dropdown dropdown-end dropdown-hover">
         <div tabindex="0" role="button" class="m-1"></div>
 
         <ul
@@ -178,7 +186,6 @@ const props = defineProps([
           </li>
         </ul>
       </div> -->
-      
       </div>
       <div class="text-black">
         <div class="flex items-center justify-between py-2 font-light">
@@ -213,3 +220,12 @@ const props = defineProps([
     </div>
   </div>
 </template>
+
+<style>
+.dropdown:hover > ul {
+  @apply block;
+}
+ul a {
+  @apply px-4 py-2 block hover:bg-slate-100;
+}
+</style>

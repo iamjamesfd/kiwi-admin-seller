@@ -5,9 +5,9 @@ import DashboardAnalytics from '@/views/DashboardAnalytics.vue'
 import DashboardComments from '@/views/DashboardComments.vue'
 import DashboardFollowers from '@/views/DashboardFollowers.vue'
 import DashboardSettings from '@/views/DashboardSettings.vue'
-import MainSettings from '@/views/Settings/MainSettings.vue'
-import ProfileSettings from '@/views/Settings/ProfileSettings.vue'
-import GeneralSecurity from '@/views/Settings/GeneralSecurity.vue'
+import MainSettings from '@/views/inner_views/Settings/MainSettings.vue'
+import ProfileSettings from '@/views/inner_views/Settings/ProfileSettings.vue'
+import GeneralSecurity from '@/views/inner_views/Settings/GeneralSecurity.vue'
 import DashboardUserProfile from '@/views/DashboardUserProfile.vue'
 
 
