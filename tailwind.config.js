@@ -21,6 +21,12 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: '#FF6200',
+        secondary: '#E0353D',
+        stroke_primary: '#EDEDED',
+        font_color: '#242424'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

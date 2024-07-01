@@ -51,7 +51,7 @@ onMounted(handleResize); // Call on component mount and resize
         <img
           src="@/assets/layout-icons/sidebar-toggler.svg"
           alt=""
-          class="w-[24px] h-[24px] duration-200 absolute right-6"
+          class="w-6 h-6 duration-200 absolute right-6"
           @click="sidebarCollapsed = !sidebarCollapsed"
         />
       </div>

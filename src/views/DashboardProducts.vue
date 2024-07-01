@@ -8,9 +8,9 @@ import ProductCard from '@/components/common/ProductCard.vue'
 </script>
 <template>
   <DashboardHeader title="Mahsulotlar" />
-  <div class="flex justify-between min-[624px]:gap-2 items-center py-8 px-6 text-black flex-wrap">
+  <div class="flex justify-between min-[624px]:gap-2 items-center py-8 px-6 text-font_color flex-wrap">
     <div class="flex">
-      <div class="w-10 h-10 rounded bg-[#DA2C2C] text-white grid place-items-center cursor-pointer">
+      <div class="w-10 h-10 rounded bg-secondary text-white grid place-items-center cursor-pointer">
         1
       </div>
       <div class="w-10 h-10 border rounded bg-white grid place-items-center cursor-pointer">2</div>
