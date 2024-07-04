@@ -1,7 +1,7 @@
 <script setup>
-import DashboardHeader from '@/components/layout/DashboardHeader.vue';
+import DashboardHeader from '@/components/layout/DashboardHeader.vue'
 </script>
 
 <template>
-  <DashboardHeader title="User"/>
+  <DashboardHeader title="User" />
 </template>

@@ -62,7 +62,7 @@ import DashboardHeader from '@/components/layout/DashboardHeader.vue'
         <tbody>
           <tr class="text-center border-b pb-2 text-sm text-black" v-for="x in 10" :key="x">
             <td class="p-3">
-              <span>{{x}}</span>
+              <span>{{ x }}</span>
             </td>
             <td class="py-3">
               <div><span>Saidmurod Xasanov</span></div>

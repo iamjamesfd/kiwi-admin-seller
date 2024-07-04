@@ -58,7 +58,9 @@ import { RouterLink } from 'vue-router'
             >
           </li>
           <li>
-            <RouterLink :to="{ name: 'security' }" class="px-4 py-2 block whitespace-nowrap">Xavfsizlik</RouterLink>
+            <RouterLink :to="{ name: 'security' }" class="px-4 py-2 block whitespace-nowrap"
+              >Xavfsizlik</RouterLink
+            >
           </li>
         </ul>
       </div>

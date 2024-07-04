@@ -1,5 +1,5 @@
 <script setup>
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
@@ -25,10 +25,10 @@ import { Icon } from '@iconify/vue';
     <div>
       <h1 class="text-sm mb-2">Do'kon manzili</h1>
       <input
-      type="text"
-      placeholder="Manzilni kiriting"
-      value="Andijon shahar 12-a uy"
-      class="w-full p-3 rounded-[10px] flex-1 border outline-none"
+        type="text"
+        placeholder="Manzilni kiriting"
+        value="Andijon shahar 12-a uy"
+        class="w-full p-3 rounded-[10px] flex-1 border outline-none"
       />
     </div>
     <div class="text-[#FF6200] flex flex-col">
@@ -50,18 +50,18 @@ import { Icon } from '@iconify/vue';
     <div>
       <h1 class="text-sm mb-2">Qo'shilgan sanasi</h1>
       <input
-      disabled
-      type="text"
-      placeholder="24 Noyabr, 2022"
-      class="w-full p-3 rounded-[10px] flex-1 border outline-none"
+        disabled
+        type="text"
+        placeholder="24 Noyabr, 2022"
+        class="w-full p-3 rounded-[10px] flex-1 border outline-none"
       />
     </div>
     <div>
       <h1 class="text-sm mb-2">Ish vaqti</h1>
       <input
-      type="text"
-      placeholder="09:00 - 18:00"
-      class="w-full p-3 rounded-[10px] flex-1 border outline-none"
+        type="text"
+        placeholder="09:00 - 18:00"
+        class="w-full p-3 rounded-[10px] flex-1 border outline-none"
       />
     </div>
   </div>

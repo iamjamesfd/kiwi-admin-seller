@@ -12,7 +12,6 @@ import DashboardUserProfile from '@/views/DashboardUserProfile.vue'
 
 import BoostProduct from '@/views/inner_views/BoostProduct.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,12 +23,12 @@ const router = createRouter({
     {
       path: '/products/:id',
       name: 'boost-product',
-      component: BoostProduct,
+      component: BoostProduct
     },
     {
       path: '/create-product',
       name: 'create-product',
-      component: CreateProduct,
+      component: CreateProduct
     },
     {
       path: '/analytics',
@@ -52,27 +51,27 @@ const router = createRouter({
       component: DashboardSettings,
       children: [
         {
-          path: "",
-          name: "main-settings",
+          path: '',
+          name: 'main-settings',
           component: MainSettings
         },
         {
-          path: "profile-settings",
-          name: "profile-settings",
+          path: 'profile-settings',
+          name: 'profile-settings',
           component: ProfileSettings
         },
         {
-          path: "security",
-          name: "security",
+          path: 'security',
+          name: 'security',
           component: GeneralSecurity
-        },
+        }
       ]
     },
     {
       path: '/user-profile',
       name: 'user-profile',
       component: DashboardUserProfile
-    },
+    }
   ]
 })
 
