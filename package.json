@@ -17,7 +17,8 @@
     "@vueuse/core": "^10.11.0",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-tsc": "^2.0.24"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -31,6 +32,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2",
     "vite": "^5.2.8",
     "vite-plugin-vue-devtools": "^7.0.25"
   }

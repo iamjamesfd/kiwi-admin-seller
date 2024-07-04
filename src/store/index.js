@@ -77,7 +77,7 @@ export const data = [
     drawback: 0,
     name: 'Galaxy S24',
     price: '6 000 000'
-  },
+  }
 ]
 
 import img_01 from '@/assets/categories/image_01.png'
@@ -153,4 +153,3 @@ export const options = [
     image: img_14
   }
 ]
-

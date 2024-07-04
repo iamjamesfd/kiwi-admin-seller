@@ -11,7 +11,7 @@
       />
     </div>
     <div class="hidden lg:block lg:invisible">clear space</div>
-    <div  class="mb-7">
+    <div class="mb-7">
       <h1 class="text-sm mb-2">Telefon raqam</h1>
       <input
         type="text"
@@ -31,7 +31,7 @@
           <span class="slider"></span>
         </label>
       </div>
-      <div class="hidden lg:block lg:invisible ">clear space</div>
+      <div class="hidden lg:block lg:invisible">clear space</div>
       <div class="flex items-center justify-between">
         <p>Yangiliklar</p>
         <label class="switch">
@@ -39,7 +39,7 @@
           <span class="slider"></span>
         </label>
       </div>
-      <div class="hidden lg:block lg:invisible ">clear space</div>
+      <div class="hidden lg:block lg:invisible">clear space</div>
       <div class="flex items-center justify-between">
         <p>Chatlar</p>
         <label class="switch">

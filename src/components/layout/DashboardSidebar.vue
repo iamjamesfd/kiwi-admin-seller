@@ -25,13 +25,13 @@ const is = (...routes) => {
 //   }
 // }
 
-const isLargeScreen = ref(window.innerWidth > 768); // Initial screen size check
+const isLargeScreen = ref(window.innerWidth > 768) // Initial screen size check
 
 const handleResize = () => {
-  isLargeScreen.value = window.innerWidth > 768;
-};
+  isLargeScreen.value = window.innerWidth > 768
+}
 
-onMounted(handleResize); // Call on component mount and resize
+onMounted(handleResize) // Call on component mount and resize
 
 // Responsive behavior based on isLargeScreen value
 // (Adapt this to your component structure)
@@ -51,7 +51,7 @@ onMounted(handleResize); // Call on component mount and resize
         <img
           src="@/assets/layout-icons/sidebar-toggler.svg"
           alt=""
-          class="w-[24px] h-[24px] duration-200 absolute right-6"
+          class="w-6 h-6 duration-200 absolute right-6"
           @click="sidebarCollapsed = !sidebarCollapsed"
         />
       </div>
@@ -157,5 +157,3 @@ onMounted(handleResize); // Call on component mount and resize
   transition: 200ms;
 }
 </style>
-
-

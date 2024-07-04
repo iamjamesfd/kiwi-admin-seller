@@ -99,7 +99,7 @@ const body = [
 <template>
   <DashboardHeader title="Analitika" />
   <div class="gap-3 p-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
       <div class="bg-white p-5 space-y-2 rounded-[10px]">
         <h3 class="text-sm">Yoqtirilganlar</h3>
         <h1 class="text-black text-2xl font-semibold">
@@ -130,10 +130,10 @@ const body = [
       </div>
     </div>
     <div class="overflow-hidden rounded-lg mt-3 lg:w-3/4">
-      <div class="pt-4 bg-white rounded-[10px] ">
+      <div class="pt-4 bg-white rounded-[10px]">
         <div class="flex items-center justify-between px-4">
           <h1 class="text-xl text-black">Top mahsulotlar</h1>
-          <select class="bg-white border px-3 py-2 rounded-lg  text-black text-sm">
+          <select class="bg-white border px-3 py-2 rounded-lg text-black text-sm">
             <option>Kunlik</option>
             <option>Haftalik</option>
             <option>Oylik</option>
@@ -141,7 +141,7 @@ const body = [
           </select>
         </div>
         <div class="overflow-auto">
-          <VirtualTable :head :body class="min-w-[692px] min-[768px]:w-full bg-white"/>
+          <VirtualTable :head :body class="min-w-[692px] min-[768px]:w-full bg-white" />
         </div>
       </div>
     </div>
