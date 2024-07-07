@@ -1,6 +1,6 @@
 <template>
   <div class="relative" :class="$attrs.tabBarClass">
-    <div class="flex overflow-auto border-b border-b-stroke-primary" @scroll="changeTab(activeTab)">
+    <div class="flex overflow-auto border-b border-b-stroke_primary" @scroll="changeTab(activeTab)">
       <div
         :key="index"
         v-for="(tab, index) in props.tabs"

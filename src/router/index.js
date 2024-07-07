@@ -10,6 +10,9 @@ import ProfileSettings from '@/views/inner_views/Settings/ProfileSettings.vue'
 import GeneralSecurity from '@/views/inner_views/Settings/GeneralSecurity.vue'
 import DashboardUserProfile from '@/views/DashboardUserProfile.vue'
 
+import ChatGroupsView from "@/views/inner_views/ChatGroupsView.vue";
+import ChatRoomView from "@/views/inner_views/ChatRoomView.vue";
+
 import BoostProduct from '@/views/inner_views/BoostProduct.vue'
 
 const router = createRouter({
@@ -71,7 +74,19 @@ const router = createRouter({
       path: '/user-profile',
       name: 'user-profile',
       component: DashboardUserProfile
-    }
+    },
+{
+    name: "chats",
+    path: "/chat",
+    component: ChatGroupsView,
+    children: [
+      {
+        name: "chatRoom",
+        path: ":roomId",
+        component: ChatRoomView,
+      },
+    ],
+  },
   ]
 })
 

@@ -6,6 +6,7 @@ import '@vueup/vue-quill/dist/vue-quill.snow.css'
 import { options } from '@/store'
 import DashboardHeader from '@/components/layout/DashboardHeader.vue'
 import VueSelect from '@/components/common/VueSelect.vue'
+import VariantsInput from '@/components/create-product/VariantsInput.vue'
 
 const editorContent = ref('')
 const editorOptions = ref({
@@ -54,11 +55,6 @@ onMounted(() => {
 })
 
 const isDeliveryAvalible = ref(null)
-const variants = ref(null)
-
-const addVariant = () => {
-  variants.value.innerHTML += '<h1>hello world</h1>'
-}
 </script>
 
 <template>
@@ -146,14 +142,11 @@ const addVariant = () => {
       </div>
     </div>
     <div class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg">
-      <h1 class="text-xl mb-8">Variant</h1>
-      <div ref="variants"></div>
+      <h1 class="text-xl mb-5">Variant</h1>
       <!-- <div>
 <h3 class="mb-2">Variant nomi <span class="text-[#DA2C2C]">*</span></h3>
 </div> -->
-      <p class="flex items-center text-[#2563EB] gap-3 cursor-default" @click="addVariant">
-        <Icon icon="ph:plus-bold"></Icon>Hajmi yoki rangi kabi variantlarni qo'shing
-      </p>
+      <VariantsInput />
     </div>
     <div
       class="col-span-12 min-[750px]:col-span-10 lg:col-span-8 p-7 bg-white rounded-lg flex gap-4 flex-wrap"

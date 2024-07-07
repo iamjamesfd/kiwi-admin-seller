@@ -25,7 +25,20 @@ module.exports = {
         primary: '#FF6200',
         secondary: '#E0353D',
         stroke_primary: '#EDEDED',
-        font_color: '#242424'
+        font_color: '#242424',
+        ["message-foreground"]: "#FFF0E6",
+      },
+      lineHeight: {
+        normal: "normal",
+      },
+      borderRadius: {
+        'lgx': '10px'
+      },
+      size: {
+        15: '60px'
+      },
+      spacing: {
+        '3.5': '14px'
       },
       keyframes: {
         "accordion-down": {
