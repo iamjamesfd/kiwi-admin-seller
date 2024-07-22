@@ -1,7 +1,7 @@
 import type User from "@/types/user/user.interface";
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
-
+  
 export const useUsersStore = defineStore("users", () => {
   const users = ref<User[]>([
     {

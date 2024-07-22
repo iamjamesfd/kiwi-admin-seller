@@ -1,6 +1,12 @@
 <template>
   <DashboardHeader title="Chat" />
- <div class="gap-x-5 p-5 md:grid md:grid-cols-9">
+ <div class="gap-x-5 py-5 md:grid md:grid-cols-9">
+    <div class="bg-white px-4 p-4 border-b">
+      <label for="search-input" class="bg-[#F5F5F5] flex gap-3 items-center p-2 rounded-lg">
+        <Icon icon="iconamoon:search" class="w-6 h-6"></Icon>
+        <input type="text" placeholder="Qidiruv..." id="search-input" class="flex-1 outline-none bg-transparent">
+      </label>
+    </div>
     <ChatList
       :class="{ hidden: chatOpen }"
       class="border-stroke_primary md:col-span-12 md:overflow-hidden md:rounded-lg md:border lg:col-span-4 lg:block"

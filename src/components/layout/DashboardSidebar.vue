@@ -41,7 +41,7 @@ onMounted(handleResize) // Call on component mount and resize
   <div>
     <div
       v-if="isLargeScreen"
-      class="min-[768px]:w-[260px] min-[1024px]:w-[312px] h-[100svh] bg-[#26282D] relative duration-500 overflow-hidden"
+      class="min-[768px]:w-[260px] min-[1024px]:w-[312px] h-[100svh] bg-[#26282D] relative duration-500"
       :class="{ '!w-[72px]': sidebarCollapsed }"
     >
       <div class="flex justify-end items-center px-8 py-6 mb-10 min-h-24 overflow-hidden relative">
@@ -55,7 +55,7 @@ onMounted(handleResize) // Call on component mount and resize
           @click="sidebarCollapsed = !sidebarCollapsed"
         />
       </div>
-      <div>
+      <div class="overflow-hidden">
         <SidebarItem
           name="Mahsulotlar"
           link-name="products"
@@ -89,7 +89,7 @@ onMounted(handleResize) // Call on component mount and resize
         />
       </div>
       <div
-        class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28 overflow-hidden"
+        class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28"
       >
         <Transition name="dissapear">
           <div class="flex items-center gap-3 flex-1" v-if="!sidebarCollapsed">
@@ -97,12 +97,18 @@ onMounted(handleResize) // Call on component mount and resize
             <h1 class="text-lg">Rahmatulloh</h1>
           </div>
         </Transition>
-        <Icon
-          icon="iconamoon:menu-kebab-vertical-bold"
-          class="w-[24px] h-[24px] absolute right-6"
-        ></Icon>
+        <div class="dropdown absolute right-4">
+          <Icon
+            icon="iconamoon:menu-kebab-vertical-bold"
+            class="w-[24px] h-[24px] p-2 box-content"
+          ></Icon>
+          <ul class="hidden absolute -top-10  z-50">
+            <li><a href="#" class="text-red-400 bg-white px-4 py-2 rounded-lg whitespace-nowrap border">Log out</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+    
     <div v-if="!isLargeScreen" class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
       <div class="flex justify-between">
         <SidebarItem
@@ -155,5 +161,8 @@ onMounted(handleResize) // Call on component mount and resize
 .dissapear-leave-to {
   opacity: 0;
   transition: 200ms;
+}
+.dropdown:hover ~ ul {
+  @apply block;
 }
 </style>

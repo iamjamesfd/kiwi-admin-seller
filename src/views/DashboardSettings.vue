@@ -31,6 +31,30 @@ import { RouterLink } from 'vue-router'
         <h1 class="text-xl font-semibold mb-5">Media</h1>
         <div>
           <div class="flex items-center gap-4 mb-5">
+            <Icon icon="logos:facebook" class="w-6 h-6"></Icon>
+            <input
+              type="text"
+              placeholder="@daveadme"
+              class="w-full p-3 rounded-lg border outline-none placeholder:!text-base placeholder:font-light"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-5">
+            <Icon icon="skill-icons:instagram" class="w-6 h-6"></Icon>
+            <input
+              type="text"
+              placeholder="@daveadme"
+              class="w-full p-3 rounded-lg border outline-none placeholder:!text-base placeholder:font-light"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-5">
+            <Icon icon="logos:tiktok-icon" class="w-6 h-6"></Icon>
+            <input
+              type="text"
+              placeholder="@daveadme"
+              class="w-full p-3 rounded-lg border outline-none placeholder:!text-base placeholder:font-light"
+            />
+          </div>
+          <div class="flex items-center gap-4 mb-5">
             <Icon icon="logos:telegram" class="w-6 h-6"></Icon>
             <input
               type="text"

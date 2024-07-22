@@ -198,7 +198,7 @@ const isDeliveryAvalible = ref(null)
   </div>
 </template>
 
-<style>
+<style scoped>
 input[type='text'] {
   @apply !bg-white placeholder:text-sm;
 }

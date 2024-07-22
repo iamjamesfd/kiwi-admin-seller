@@ -17,7 +17,7 @@
               'font-medium !text-primary': activeTab === index
             }"
           >
-            <p>{{ tab }}</p>
+            <p class="whitespace-nowrap">{{ tab }}</p>
           </button>
         </slot>
       </div>
