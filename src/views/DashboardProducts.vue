@@ -2,9 +2,16 @@
 import { RouterLink } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import { data } from '@/store'
+import useMarketProductStore from "@/store/api/useMarketProductsStore";
 
 import DashboardHeader from '@/components/layout/DashboardHeader.vue'
 import ProductCard from '@/components/common/ProductCard.vue'
+import { onMounted } from 'vue'
+onMounted(async () => {
+  const productsStore = useMarketProductStore(); 
+  await productsStore.fetchData();
+  console.log(productsStore.items);
+})
 </script>
 <template>
   <DashboardHeader title="Mahsulotlar" />

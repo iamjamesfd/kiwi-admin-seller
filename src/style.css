@@ -1,0 +1,58 @@
+@import url("./assets/components.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer primevue, tailwind-base, tailwind-components, tailwind-utilities;
+
+@layer base {
+  * {
+    /*background-color: rgba(244, 0, 51, .1)*/
+  }
+  body {
+    overflow: hidden;
+  }
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --mobile-bottom-nav-height: 75px;
+
+    --p-menubar-border-radius: 20px;
+    --p-form-field-border-radius: 10px;
+  }
+}
+
+@layer components {
+  .sidebar {
+    --sidebar-expanded-width: 312px;
+    --sidebar-width: 72px;
+    --sidebar-bg: theme(colors.sidebar-bg);
+  }
+
+  .form-input {
+    @apply px-5 py-7.5 bg-white rounded-xls text-lg leading-normal  text-font-color-primary   focus:outline-none  focus:border-primary transition-colors border border-transparent w-full;
+  }
+  .btn {
+    @apply py-5 bg-primary text-white rounded-xls w-full px-3 focus:ring ring-primary focus:ring-opacity-20 focus:outline-none;
+  }
+
+  .badge-secondary {
+    @apply bg-[#F5F5F5] rounded-lg px-4 py-2 text-tertiary text-sm transition-colors;
+  }
+  .badge-secondary.active {
+    @apply bg-tertiary text-white;
+  }
+
+  .dropdown-item {
+    @apply w-full text-slate-800 hover:bg-slate-200 focus:bg-slate-300 active:bg-slate-300 px-3 py-1 rounded transition-colors text-left;
+  }
+
+  .input {
+    @apply h-full w-full rounded-lg border-opacity-10 bg-input-foreground px-3 py-2.5 text-sm leading-tight transition-colors placeholder:opacity-80 placeholder:transition-colors focus:border-opacity-80 focus:outline-none focus:placeholder:opacity-100 focus-within:ring focus-within:ring-offset-2 focus:ring;
+  }
+}

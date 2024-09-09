@@ -153,3 +153,18 @@ export const options = [
     image: img_14
   }
 ]
+
+
+import { ref } from "vue";
+import type { ISiteConf } from "@/types";
+
+export const showAnnouncementModal = ref(false);
+
+let api_host = "localhost:8000",
+  api_protocol = "http:";
+
+export const SITE_CONF: ISiteConf = {
+  API_HOST: api_host,
+  API_PROTOCOL: api_protocol,
+  API_ORIGIN: `${api_protocol}//${api_host}`,
+};

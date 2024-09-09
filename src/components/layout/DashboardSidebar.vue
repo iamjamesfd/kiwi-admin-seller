@@ -1,8 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { onMounted, ref } from 'vue'
 import SidebarItem from '../common/SidebarItem.vue'
 import { useRoute } from 'vue-router'
+import Menu from 'primevue/menu'
+
+import useAuthStore from '@/store/api/useAuthStore'
 
 const route = useRoute()
 
@@ -10,9 +13,19 @@ const sidebarCollapsed = ref(true)
 
 const dashboardSettingsChildrenPath = ['main-settings', 'profile-settings', 'security']
 
-const is = (...routes) => {
+const is = (...routes: string[]) => {
   const args = Array.from(routes)
   return args.some((r) => r === route.name)
+}
+
+const logoutMenu = ref()
+const authStore = useAuthStore()
+
+const toggleLogoutMenu = (event: Event) => {
+  if (logoutMenu.value) {
+    console.log(logoutMenu)
+    logoutMenu.value.toggle(event)
+  }
 }
 
 // const showSidebar = ref(true)
@@ -48,12 +61,13 @@ onMounted(handleResize) // Call on component mount and resize
         <Transition name="dissapear">
           <h1 class="text-[28px] text-white flex-1" v-if="!sidebarCollapsed">Mandarin</h1>
         </Transition>
-        <img
-          src="@/assets/layout-icons/sidebar-toggler.svg"
-          alt=""
-          class="w-6 h-6 duration-200 absolute right-6"
-          @click="sidebarCollapsed = !sidebarCollapsed"
-        />
+        <button type="button" @click="sidebarCollapsed = !sidebarCollapsed">
+          <img
+            src="@/assets/layout-icons/sidebar-toggler.svg"
+            alt=""
+            class="w-6 h-6 duration-200 absolute right-6"
+          />
+        </button>
       </div>
       <div class="overflow-hidden">
         <SidebarItem
@@ -90,25 +104,32 @@ onMounted(handleResize) // Call on component mount and resize
       </div>
       <div
         class="w-full px-8 py-6 text-white flex items-center justify-end absolute bottom-0 min-h-28"
+        :class="{ '!p-0 justify-center': sidebarCollapsed }"
       >
         <Transition name="dissapear">
           <div class="flex items-center gap-3 flex-1" v-if="!sidebarCollapsed">
             <div class="w-[50px] h-[50px] bg-gray-400 rounded-full"></div>
-            <h1 class="text-lg">Rahmatulloh</h1>
+            <h1 class="text-lg">{{ authStore.user?.username }}</h1>
           </div>
         </Transition>
-        <div class="dropdown absolute right-4">
-          <Icon
-            icon="iconamoon:menu-kebab-vertical-bold"
-            class="w-[24px] h-[24px] p-2 box-content"
-          ></Icon>
-          <ul class="hidden absolute -top-10  z-50">
-            <li><a href="#" class="text-red-400 bg-white px-4 py-2 rounded-lg whitespace-nowrap border">Log out</a></li>
-          </ul>
+        <div>
+          <button
+            class="p-2.5 hover:bg-[#181B1F] rounded-full"
+            aria-haspopup="true"
+            aria-controls="overlay_menu"
+            @click="toggleLogoutMenu"
+          >
+            <Icon icon="iconamoon:menu-kebab-vertical-bold" class="size-6 p-2 box-content"></Icon>
+          </button>
+          <Menu
+            ref="logoutMenu"
+            :model="[{ label: 'Logout', command: () => authStore.logout() }]"
+            :popup="true"
+          />
         </div>
       </div>
     </div>
-    
+
     <div v-if="!isLargeScreen" class="w-full h-[72px] bg-[#26282D] fixed bottom-0 z-30">
       <div class="flex justify-between">
         <SidebarItem
