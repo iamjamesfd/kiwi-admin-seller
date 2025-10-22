@@ -9,7 +9,7 @@ import ProductCard from '@/components/common/ProductCard.vue'
 import { onMounted } from 'vue'
 onMounted(async () => {
   const productsStore = useMarketProductStore(); 
-  await productsStore.fetchData();
+  await productsStore.fetchData({ market});
   console.log(productsStore.items);
 })
 </script>
